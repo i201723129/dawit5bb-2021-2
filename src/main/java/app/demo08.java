@@ -12,7 +12,7 @@ public class demo08 {
 	public static void main(String[] args) {
 		  EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("mysql");
 		  EntityManager em = fabrica.createEntityManager();
-		  //Usuario u = em.find(Usuario.class, 11); tiempo 01:45
+		  //Usuario u = em.find(Usuario.class, 11); 
 		  String sql="Select u from Usuario u where u.usuario = :xusr and u.clave= :xcla";
 		  TypedQuery<Usuario> query3 = em.createQuery(sql,Usuario.class);
 		  query3.setParameter("xusr", "U002@gmail.com"); 
